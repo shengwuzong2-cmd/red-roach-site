@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection | RED ROACH</title>
+    <meta name="description" content="RED ROACHの製品ラインナップ。S/M/Lの3サイズ展開。洗練されたパッケージでお届けする、6gプレミアムな餌用個体群。" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./src/styles/variables.css">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/animations.css">
+    <link rel="stylesheet" href="./src/styles/products.css">
+    <link rel="stylesheet" href="./src/styles/product-card.css">
+    <link rel="stylesheet" href="./src/styles/optimizer.css">
+    <link rel="stylesheet" href="./src/styles/monitor.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Side Menu Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="side-drawer" id="sideDrawer">
+        <nav class="drawer-nav">
+            <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </nav>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav-links">
+            <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif nav-link active">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif nav-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif nav-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif nav-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif nav-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </div>
+        <div class="telemetry-pill">
+            <div class="live-dot-container">
+                <span class="pulse-dot"></span>
+                LIVE
+            </div>
+            <div class="telemetry-values">
+                <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+                <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 0; padding-bottom: 120px;">
+
+        <!-- Collection Hero Section (Matching Home Style) -->
+        <section class="hero-section" style="min-height: 50vh; margin-bottom: 40px; padding-top: 60px;">
+            <h1 class="serif hero-title fade-in-up delay-1" style="margin-top: 0;">商品コレクション <span
+                    class="hero-sub">COLLECTION.</span></h1>
+            <p class="fade-in-up delay-2" style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">
+                選りすぐりの１品を、あなたのもとに。</p>
+        </section>
+
+        <!-- Feeding Optimizer -->
+        <section class="optimizer-section">
+            <div class="optimizer-container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="serif hero-title" style="margin-top: 0;">給餌プラン算出 <span class="hero-sub">FEEDING
+                            OPTIMIZER.</span></h2>
+                    <p style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em; margin-bottom: 0;">最適な給餌プランを算出します。
+                    </p>
+                </div>
+
+                <div class="opt-form">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <div class="input-group">
+                                <label>飼育している生体</label>
+                                <div style="position: relative;">
+                                    <select id="speciesSelect" class="opt-input-select">
+                                        <option value="" disabled selected>選択してください</option>
+
+                                        <optgroup label="トカゲ類 (Lizards)">
+                                            <option value="monitor_savannah">サバンナモニター</option>
+                                            <option value="monitor_ridge">リッジテールモニター</option>
+                                            <option value="tegu">テグー</option>
+                                            <option value="agame_bearded">フトアゴヒゲトカゲ</option>
+                                            <option value="skink_blue">アオジタトカゲ</option>
+                                            <option value="skink_fire">フェルナンデススキンク</option>
+                                            <option value="lizard_armadillo">アルマジロトカゲ</option>
+                                            <option value="lizard_sandfish">サンドフィッシュ</option>
+                                        </optgroup>
+
+                                        <optgroup label="ヤモリ・地上性 (Geckos)">
+                                            <option value="gecko_leopard">レオパードゲッコー</option>
+                                            <option value="gecko_fattail">ニシアフリカトカゲモドキ</option>
+                                            <option value="gecko_knobtail">タマオヤモリ</option>
+                                            <option value="gecko_underwood">ナキヤモリ</option>
+                                            <option value="gecko_micro">小型種 (Coleonyx等)</option>
+                                        </optgroup>
+
+                                        <optgroup label="ヤモリ・樹上性 (Geckos)">
+                                            <option value="gecko_crested">クレステッドゲッコー</option>
+                                            <option value="gecko_gargoyle">ガーゴイルゲッコー</option>
+                                            <option value="gecko_tokay">トッケイ</option>
+                                            <option value="gecko_leachie">ジャイアントゲッコー</option>
+                                            <option value="gecko_day">ヒルヤモリ</option>
+                                        </optgroup>
+
+                                        <optgroup label="カエル・イモリ (Amphibians)">
+                                            <option value="frog_pacman">ツノガエル</option>
+                                            <option value="frog_pixie">アフリカウシガエル</option>
+                                            <option value="frog_tree">ツリーフロッグ</option>
+                                            <option value="frog_dart">ヤドクガエル</option>
+                                            <option value="newt">イモリ・サラマンダー</option>
+                                        </optgroup>
+
+                                        <optgroup label="奇蟲・昆虫 (Arthropods)">
+                                            <option value="spider_tarantula">タランチュラ</option>
+                                            <option value="scorpion">サソリ</option>
+                                            <option value="centipede">ムカデ</option>
+                                            <option value="spider_hunting">アシダカグモ等</option>
+                                            <option value="insect_mantis">カマキリ</option>
+                                            <option value="insect_predatory">サシガメ・肉食甲虫</option>
+                                        </optgroup>
+
+                                        <optgroup label="小動物・鳥 (Mammals/Birds)">
+                                            <option value="mammal_hedgehog">ハリネズミ</option>
+                                            <option value="mammal_glider">フクロモモンガ</option>
+                                            <option value="mammal_meerkat">ミーアキャット</option>
+                                            <option value="mammal_marmoset">小型猿</option>
+                                            <option value="bird_owl">小型フクロウ</option>
+                                        </optgroup>
+
+                                        <optgroup label="魚類・水棲 (Aquatic)">
+                                            <option value="fish_arowana">アロワナ</option>
+                                            <option value="fish_predatory">オスカー/スネークヘッド</option>
+                                            <option value="turtle_aquatic">水棲ガメ</option>
+                                            <option value="aquatic_crab">ザリガニ/カニ</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>成長段階</label>
+                                <div class="opt-chip-container" data-id="sizeSelect">
+                                    <button class="opt-chip active" data-value="hatchling">ベビー</button>
+                                    <button class="opt-chip" data-value="juvenile">ヤング</button>
+                                    <button class="opt-chip" data-value="subadult">サブアダルト</button>
+                                    <button class="opt-chip" data-value="adult">アダルト</button>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>個体数</label>
+                                <div class="number-input-wrapper">
+                                    <button class="qty-adjust" data-dir="-1">—</button>
+                                    <input type="number" id="individualCount" class="opt-input-num" value="1" min="1"
+                                        max="50" readonly />
+                                    <button class="qty-adjust" data-dir="1">+</button>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>温度設定</label>
+                                <div class="opt-chip-container" data-id="keepingTemp">
+                                    <button class="opt-chip" data-value="20">20°C</button>
+                                    <button class="opt-chip" data-value="25">25°C</button>
+                                    <button class="opt-chip active" data-value="28">28°C</button>
+                                    <button class="opt-chip" data-value="30">30°C</button>
+                                    <button class="opt-chip" data-value="35">35°C</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 80px;">
+                            <button class="serif analyze-btn">プランを算出する</button>
+                        </div>
+
+                        <div id="suggestionArea" class="suggestion-box" style="display:none;">
+                            <h3 id="resultTitle" class="serif"></h3>
+                            <div id="resultDesc"></div>
+                            <a id="dynamicBuyBtn" class="purchase-link"></a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Real Size Chart -->
+        <div class="fade-in-up" style="margin-bottom: 120px;">
+            <div class="size-chart-section">
+                <div class="real-size-wrapper" style="box-shadow: none; max-width: 600px; margin: 0 auto;">
+                    <img src="/size_chart.png" alt="SIZE REFERENCE" class="real-size-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- SS Size 統合カード -->
+        <section class="product-category" id="category-ss" style="padding: 20px 0;">
+            <div class="product-card unified-card" data-size="SS" id="size-ss">
+                <div class="card-info">
+                    <h3>SIZE SS</h3>
+
+                    <!-- 購入タイプ切り替え -->
+                    <div class="sub-toggle-container">
+                        <div class="sub-option">通常購入</div>
+                        <div class="sub-option active-sub">定期購入 <span class="discount-tag">10% OFF</span></div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="selector-group">
+                        <label>数量</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn active" data-qty="100">100</button>
+                            <button class="qty-btn" data-qty="200">200</button>
+                            <button class="qty-btn" data-qty="300">300</button>
+                        </div>
+                    </div>
+
+                    <!-- 配送頻度選択 -->
+                    <div class="selector-group delivery-freq-container active">
+                        <label>配送頻度</label>
+                        <div class="freq-options">
+                            <button class="freq-option">2週間</button>
+                            <button class="freq-option active">1ヶ月</button>
+                            <button class="freq-option">2ヶ月</button>
+                            <button class="freq-option">3ヶ月</button>
+                        </div>
+                    </div>
+
+                    <!-- 価格・購入 -->
+                    <div class="price-purchase-section">
+                        <p class="price subscribed">
+                            <span class="current-price">¥2,375</span>
+                            <span class="unit-price">(@¥23.8 / unit)</span>
+                        </p>
+                        <button class="add-cart-btn">定期購入を開始</button>
+                    </div>
+
+                    <div class="user-voice">
+                        <span class="voice-user">🦎 Verified Buyer</span>
+                        「喉が細いハッチリングにはこのSS一択。鮮度と安全を考えてこの100匹周期が無理なく使い切れてベストですね。」
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- S Size 統合カード -->
+        <section class="product-category" id="category-s" style="padding: 20px 0;">
+            <div class="product-card unified-card" data-size="S" id="size-s">
+                <div class="card-info">
+                    <h3>SIZE S</h3>
+
+                    <!-- 購入タイプ切り替え -->
+                    <div class="sub-toggle-container">
+                        <div class="sub-option">通常購入</div>
+                        <div class="sub-option active-sub">定期購入 <span class="discount-tag">10% OFF</span></div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="selector-group">
+                        <label>数量</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" data-qty="100">100</button>
+                            <button class="qty-btn" data-qty="200">200</button>
+                            <button class="qty-btn active" data-qty="300">300</button>
+                        </div>
+                    </div>
+
+                    <!-- 配送頻度選択 -->
+                    <div class="selector-group delivery-freq-container active">
+                        <label>配送頻度</label>
+                        <div class="freq-options">
+                            <button class="freq-option">2週間</button>
+                            <button class="freq-option active">1ヶ月</button>
+                            <button class="freq-option">2ヶ月</button>
+                            <button class="freq-option">3ヶ月</button>
+                        </div>
+                    </div>
+
+                    <!-- 価格・購入 -->
+                    <div class="price-purchase-section">
+                        <p class="price subscribed">
+                            <span class="current-price">¥2,660</span>
+                            <span class="unit-price">(@¥26.6 / unit)</span>
+                        </p>
+                        <button class="add-cart-btn">定期購入を開始</button>
+                    </div>
+
+                    <!-- ユーザーボイス -->
+                    <div class="user-voice">
+                        <span class="voice-user">🦎 Verified Buyer</span>
+                        「多頭飼いなので汎用性の高いSサイズを300。レオパからクレスまで全員これ。粒が揃っているので給餌量の管理がしやすいです。」
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- M Size 統合カード -->
+        <section class="product-category" id="category-m" style="padding: 20px 0;">
+            <div class="product-card unified-card best-seller-card" data-size="M" id="size-m">
+                <span class="badge-seller">👑 No.1 BEST SELLER</span>
+
+                <div class="card-info">
+                    <h3>SIZE M</h3>
+
+                    <!-- 購入タイプ切り替え -->
+                    <div class="sub-toggle-container">
+                        <div class="sub-option">通常購入</div>
+                        <div class="sub-option active-sub">定期購入 <span class="discount-tag">10% OFF</span></div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="selector-group">
+                        <label>数量</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" data-qty="100">100</button>
+                            <button class="qty-btn active" data-qty="200">200</button>
+                            <button class="qty-btn" data-qty="300">300</button>
+                        </div>
+                    </div>
+
+                    <!-- 配送頻度選択 -->
+                    <div class="selector-group delivery-freq-container active">
+                        <label>配送頻度</label>
+                        <div class="freq-options">
+                            <button class="freq-option">2週間</button>
+                            <button class="freq-option active">1ヶ月</button>
+                            <button class="freq-option">2ヶ月</button>
+                            <button class="freq-option">3ヶ月</button>
+                        </div>
+                    </div>
+
+                    <!-- 価格・購入 -->
+                    <div class="price-purchase-section">
+                        <p class="price subscribed">
+                            <span class="current-price">¥2,850</span>
+                            <span class="unit-price">(@¥14.3 / unit)</span>
+                        </p>
+                        <button class="add-cart-btn">定期購入を開始</button>
+                    </div>
+
+                    <!-- ユーザーボイス -->
+                    <div class="user-voice">
+                        <span class="voice-user">🦎 Verified Buyer</span>
+                        「常用するMサイズは鮮度重視で200。期限内に無理なく使い切れてベスト。これに変えてから食いつきが安定しました。」
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- L Size 統合カード -->
+        <section class="product-category" id="category-l" style="padding: 20px 0;">
+            <div class="product-card unified-card" data-size="L" id="size-l">
+                <div class="card-info">
+                    <h3>SIZE L</h3>
+
+                    <!-- 購入タイプ切り替え -->
+                    <div class="sub-toggle-container">
+                        <div class="sub-option">通常購入</div>
+                        <div class="sub-option active-sub">定期購入 <span class="discount-tag">10% OFF</span></div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="selector-group">
+                        <label>数量</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" data-qty="100">100</button>
+                            <button class="qty-btn" data-qty="200">200</button>
+                            <button class="qty-btn active" data-qty="300">300</button>
+                        </div>
+                    </div>
+
+                    <!-- 配送頻度選択 -->
+                    <div class="selector-group delivery-freq-container active">
+                        <label>配送頻度</label>
+                        <div class="freq-options">
+                            <button class="freq-option">2週間</button>
+                            <button class="freq-option active">1ヶ月</button>
+                            <button class="freq-option">2ヶ月</button>
+                            <button class="freq-option">3ヶ月</button>
+                        </div>
+                    </div>
+
+                    <!-- 価格・購入 -->
+                    <div class="price-purchase-section">
+                        <p class="price subscribed">
+                            <span class="current-price">¥3,135</span>
+                            <span class="unit-price">(@¥31.4 / unit)</span>
+                        </p>
+                        <button class="add-cart-btn">定期購入を開始</button>
+                    </div>
+
+                    <!-- ユーザーボイス -->
+                    <div class="user-voice">
+                        <span class="voice-user">🦎 Verified Buyer</span>
+                        「成体のフトアゴには食べ応えのあるL。たっぷりストックしておけるこのプランは欠かせませんね。」
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/src/scripts/product-data.js"></script>
+    <script type="module" src="/src/scripts/product-card.js"></script>
+    <script type="module" src="/src/scripts/products-logic.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
+
+</body>
+
+</html>

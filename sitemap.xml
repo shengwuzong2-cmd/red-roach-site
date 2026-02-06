@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yoursite.com/index.html</loc>
+    <lastmod>2026-01-21</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yoursite.com/products.html</loc>
+    <lastmod>2026-01-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yoursite.com/quality.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoursite.com/consultation.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoursite.com/guide.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoursite.com/feeding-guide.html</loc>
+    <lastmod>2026-01-21</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>

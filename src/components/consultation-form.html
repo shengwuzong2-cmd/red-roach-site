@@ -1,0 +1,66 @@
+<h1 class="serif hero-title">個別相談
+    <span class="hero-sub">PRIVATE CONSULTATION</span>
+</h1>
+<p class="form-intro">
+    個別の詳細なご相談はこちらから。<br>内容に応じて最適な専門家が回答を作成します。
+</p>
+
+<form class="consult-form" id="consultForm">
+    <div class="form-group">
+        <label>カテゴリー</label>
+        <div class="radio-group">
+            <label class="radio-label">
+                <input type="radio" name="category" value="health">
+                <span>健康</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="category" value="nutrition">
+                <span>餌・栄養</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="category" value="environment">
+                <span>環境</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="form-grid-2">
+        <div class="form-group">
+            <label>生物種</label>
+            <input type="text" class="input-text" name="species" placeholder="例: レオパードゲッコー">
+        </div>
+        <div class="form-group">
+            <label>年齢・サイズ</label>
+            <input type="text" class="input-text" name="age_size" placeholder="例: 1歳 / 60g">
+        </div>
+    </div>
+
+    <!-- Academic Evidence Display -->
+    <div id="evidenceDisplay" class="evidence-box" style="display: none;">
+        <div class="evidence-header">
+            <span class="evidence-icon">🎓</span> ACADEMIC INSIGHT
+        </div>
+        <p id="evidenceText" class="evidence-text"></p>
+        <div id="evidenceRefs" class="evidence-refs"></div>
+    </div>
+
+    <div class="form-group">
+        <label>相談内容</label>
+        <textarea class="input-area" name="details" rows="6"
+            placeholder="具体的な症状や、現在の飼育環境(温度・湿度・床材など)を詳しくご記入ください。"></textarea>
+    </div>
+
+    <div class="form-action text-center">
+        <button type="submit" class="serif submit-btn">送信する</button>
+    </div>
+</form>
+
+<div class="success-message" id="successMessage" style="display: none;">
+    <div class="success-icon">✓</div>
+    <h3 class="serif success-title">送信完了</h3>
+    <p class="success-text">
+        お問い合わせを受け付けました。<br>
+        専門家チームが内容を確認し、3営業日以内に回答いたします。
+    </p>
+    <button class="serif submit-btn" id="resetBtn" style="margin-top: 24px;">フォームに戻る</button>
+</div>

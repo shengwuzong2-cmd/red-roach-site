@@ -1,0 +1,31 @@
+:root {
+  /* Color Palette - Core */
+  --color-bg: #FFFFFF;
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-brand: #800020;
+  --color-accent-blue: #0047AB;
+  /* サイト共通のアクセントブルー */
+  --color-accent-gold: #D4AF37;
+  /* プレミアムカード等のゴールド */
+  --color-gray-light: #F5F5F5;
+  --color-gray-medium: #E0E0E0;
+  --card-border-gold: rgba(212, 175, 55, 0.3);
+
+  /* Typography */
+  --font-serif: 'Noto Serif JP', 'YuMincho', 'Hiragino Mincho ProN', serif;
+  --font-sans: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+  --font-en: 'Didot', 'Bodoni', 'Helvetica Neue', serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 48px;
+  --spacing-xl: 120px;
+
+  /* Transitions */
+  --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-medium: 0.4s ease-out;
+  --transition-fast: 0.2s ease;
+}

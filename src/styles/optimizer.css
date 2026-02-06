@@ -1,0 +1,343 @@
+/* =========================================================================
+   FEEDING OPTIMIZER - CLINICAL TECH STYLE
+   ========================================================================= */
+
+.optimizer-section {
+    background: #F5F7FA;
+    /* Sterile Silver - Lab Background */
+    padding: 120px 0;
+    margin-bottom: 0;
+    border-top: 1px solid #E1E4E8;
+    border-bottom: 1px solid #E1E4E8;
+    position: relative;
+    overflow: hidden;
+}
+
+.optimizer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Match 'NOT BAIT.' Typography */
+.section-title {
+    font-family: var(--font-serif-luxury);
+    font-size: 2.5rem;
+    /* Quality page scale */
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    /* High contrast black/grey */
+    text-transform: uppercase;
+}
+
+.opt-desc {
+    color: #5C6B7F;
+    /* Tech Blue-Grey */
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans-modern);
+    font-weight: 500;
+}
+
+/* 2カラムレイアウト */
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.input-group {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.input-group label {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: #2C3E50;
+    /* Deep Tech Blue */
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-align: left !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group label::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #0066FF;
+    /* Signal Blue */
+    border-radius: 50%;
+}
+
+/* Select Input - Clinical Tech */
+.opt-input-select {
+    width: 100%;
+    height: 52px;
+    padding: 0 15px;
+    border: 1px solid #D1D5DB;
+    background: #FFFFFF;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    appearance: none;
+    /* Custom Arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-family: var(--font-en);
+    letter-spacing: 0.05em;
+}
+
+.opt-input-select:focus {
+    outline: none;
+    border-color: #0066FF;
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+}
+
+.opt-input-select optgroup {
+    font-style: normal;
+    font-weight: 700;
+    color: #111827;
+    background: #F9FAFB;
+}
+
+/* チップ（セグメント）UI */
+/* Chip Styling - Clinical Tech */
+.opt-chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: transparent;
+    padding: 0;
+    justify-content: flex-start !important;
+}
+
+.opt-chip {
+    flex: 1;
+    min-width: 80px;
+    padding: 14px 10px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    /* Slightly rounded for 'device key' feel */
+    color: #6B7280;
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* Subtle depth */
+}
+
+.opt-chip:hover {
+    border-color: #0066FF;
+    color: #0066FF;
+    background: #F0F7FF;
+    transform: translateY(-1px);
+}
+
+.opt-chip.active {
+    background: #0066FF;
+    /* Lab Blue Active */
+    border-color: #0066FF;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+    /* Glow effect */
+}
+
+/* 数量調整ボタンの高級化 */
+/* Number Input - Medical Grade */
+.number-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D1D5DB;
+    background: #FFFFFF;
+    border-radius: 6px;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.qty-adjust {
+    width: 60px;
+    height: 50px;
+    background: #F9FAFB;
+    border: none;
+    color: #4B5563;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 300;
+}
+
+.qty-adjust:hover {
+    background: #E5E7EB;
+    color: #000;
+}
+
+.opt-input-num {
+    flex: 1;
+    height: 50px;
+    background: #FFFFFF;
+    border: none;
+    border-left: 1px solid #E5E7EB;
+    border-right: 1px solid #E5E7EB;
+    color: #111827;
+    text-align: center;
+    font-family: var(--font-en);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* 解析ボタン */
+/* Analyze Button - Technical */
+/* Analyze Button - High Vis Tech */
+.analyze-btn {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.analyze-btn:hover {
+    background: #0066FF;
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 結果表示エリア */
+/* Suggestion Box - Dark Mode */
+/* Suggestion Box - Processed Data Style */
+.suggestion-box {
+    background: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    border-left: 4px solid #0066FF !important;
+    /* Tech Accent */
+    color: #374151;
+    padding: 40px;
+    text-align: left;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 8px;
+    /* Slight round */
+}
+
+.suggestion-box h3 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #F3F4F6;
+    padding-bottom: 16px;
+    color: #111827;
+}
+
+.suggestion-box p {
+    color: #4B5563;
+    line-height: 1.8;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .optimizer-section {
+        padding: 60px 0;
+    }
+
+    .optimizer-container {
+        padding: 0 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .opt-chip {
+        flex: 1 1 45%;
+    }
+}
+
+#resultTitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    font-family: var(--font-serif);
+}
+
+#resultDesc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+#processLog {
+    font-family: monospace;
+    font-size: 0.72rem;
+    color: var(--color-accent-blue);
+    padding: 16px;
+    background: rgba(0, 71, 171, 0.04);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+    height: 90px;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 71, 171, 0.1);
+}
+
+.purchase-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 45px;
+    background: var(--color-text-main);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 850;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    letter-spacing: 0.05em;
+}
+
+.purchase-link:hover {
+    transform: translateY(-2px);
+    background: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}

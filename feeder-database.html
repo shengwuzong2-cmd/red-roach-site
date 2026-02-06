@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimization -->
+    <title>爬虫類餌データベース - 科学的栄養価データ | RED ROACH</title>
+    <meta name="description" content="180+の研究ソースに基づく爬虫類餌の完全データベース。コオロギ、ローチ、ワーム類の栄養価、Ca:P比、脂肪酸組成を詳細に解説。">
+    <meta name="keywords" content="爬虫類,餌,栄養価,カルシウム,リン,タンパク質,脂質,レッドローチ,デュビア,コオロギ">
+
+    <!-- Open Graph / SNS -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="爬虫類餌データベース - 科学的栄養価データ">
+    <meta property="og:description" content="180+の研究ソースに基づく爬虫類餌の完全データベース">
+
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/guide.css">
+    <link rel="stylesheet" href="./src/styles/feeder-database.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Side Menu Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="side-drawer" id="sideDrawer">
+        <nav class="drawer-nav">
+            <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </nav>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav-links">
+            <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif nav-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif nav-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif nav-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif nav-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif nav-link active">餌データベース <span
+                    class="nav-sub">DATABASE</span></a>
+        </div>
+        <div class="telemetry-pill">
+            <div class="live-dot-container">
+                <span class="pulse-dot"></span>
+                LIVE
+            </div>
+            <div class="telemetry-values">
+                <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+                <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh; margin-bottom: 40px; padding-top: 60px;">
+            <h1 class="serif hero-title fade-in-up delay-1" style="margin-top: 0;">爬虫類餌データベース <span
+                    class="hero-sub">FEEDER DATABASE.</span></h1>
+            <p class="fade-in-up delay-2" style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">
+                科学的データに基づく栄養価と特徴(180+の研究ソースより)</p>
+
+            <!-- Search Box -->
+            <div class="feeder-search-container fade-in-up delay-3" style="max-width: 700px; margin: 40px auto 0;">
+                <input type="text" id="feederSearchInput" class="feeder-search-input"
+                    placeholder="🔍 餌を検索（例: デュビア、コオロギ、ミルワーム）">
+                <div id="feederSearchResultCount" class="search-result-count"
+                    style="display: none; text-align: center; margin-top: 16px; color: #666; font-size: 1rem;"></div>
+            </div>
+        </section>
+
+        <!-- Feeder Database Section -->
+        <section id="feeder-database" class="manual-section">
+            <h2 class="section-title">餌の栄養価データ <span class="hero-sub" style="color: #333; opacity: 0.6;">NUTRITIONAL
+                    DATA</span></h2>
+            <p class="section-subtitle">各餌昆虫の詳細な栄養成分と給餌時の注意点</p>
+
+            <!-- Dynamic Content Container -->
+            <div id="feeder-database-container">
+                <!-- JavaScript will populate this area -->
+                <div class="text-center" style="padding: 40px; color: #888;">
+                    Loading Database...
+                </div>
+            </div>
+
+            <!-- Load Modular Scripts -->
+            <script type="module">
+                import { initFeederDatabase } from './src/scripts/feeder-database.js';
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', initFeederDatabase);
+                } else {
+                    initFeederDatabase();
+                }
+            </script>
+        </section>
+
+        <!-- Related Links -->
+        <section class="container">
+            <div style="background: #f8f8f8; padding: 32px; border-radius: 8px; margin-top: 48px;">
+                <h3 style="margin-bottom: 16px; font-size: 1.2rem;">関連ガイド</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 12px 0;">📖 <a href="./guide.html"
+                            style="color: #1A1A1A; text-decoration: none; font-weight: 500;">飼育ガイド - 温度・湿度管理</a></li>
+                    <li style="margin: 12px 0;">🍴 <a href="./feeding-guide.html"
+                            style="color: #1A1A1A; text-decoration: none; font-weight: 500;">給餌ガイド - 餌槍テクニック</a></li>
+                    <li style="margin: 12px 0;">📊 <a href="./products.html"
+                            style="color: #1A1A1A; text-decoration: none; font-weight: 500;">給餌量計算 - Feeding
+                            Optimizer</a></li>
+                    <li style="margin: 12px 0;">💬 <a href="./consultation.html"
+                            style="color: #1A1A1A; text-decoration: none; font-weight: 500;">相談室 - 専門家に質問</a></li>
+                    <li style="margin: 12px 0;">🔬 <a href="./quality.html"
+                            style="color: #1A1A1A; text-decoration: none; font-weight: 500;">品質のこだわり - 論文リポジトリ</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="container" style="margin-top: 80px; margin-bottom: 60px;">
+            <div id="references-section">
+                <!-- JavaScript will populate title and subtitle here -->
+            </div>
+
+            <!-- Search Box (below title) -->
+            <div class="repo-search-container" style="max-width: 800px; margin: 0 auto 40px;">
+                <input type="text" id="referencesSearchInput" class="repo-search-input"
+                    style="padding: 20px 24px; font-size: 1.1rem;" placeholder="🔍 論文を検索（著者、タイトル、年）">
+                <div id="referencesSearchResultCount" class="search-result-count"
+                    style="display: none; text-align: center; margin-top: 16px; color: #666; font-size: 1rem;"></div>
+            </div>
+
+            <div id="references-accordion-container">
+                <!-- JavaScript will populate accordion here -->
+            </div>
+        </section>
+
+        <!-- Update Log -->
+        <section class="update-section">
+            <div class="update-log">
+                <span class="update-icon">📅</span>
+                <span class="update-text">最終更新日: <strong>2026.02.05</strong></span>
+            </div>
+            <p class="update-note">このデータベースは、180+の学術論文と飼育経験者の知見に基づいて作成されています。</p>
+        </section>
+    </main>
+
+    <script type="module" src="/src/scripts/guide.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>

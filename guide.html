@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Guide - THE LAB</title>
+    <meta name="description" content="科学的根拠に基づいた、失敗しない飼育マニュアル。温度・湿度管理から餌の与え方まで、初心者でも安心の飼育ガイド。">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/guide.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Side Menu Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="side-drawer" id="sideDrawer">
+        <nav class="drawer-nav">
+            <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </nav>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav-links">
+            <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif nav-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif nav-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif nav-link active">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif nav-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif nav-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </div>
+        <div class="telemetry-pill">
+            <div class="live-dot-container">
+                <span class="pulse-dot"></span>
+                LIVE
+            </div>
+            <div class="telemetry-values">
+                <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+                <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh; margin-bottom: 40px; padding-top: 60px;">
+            <h1 class="serif hero-title fade-in-up delay-1" style="margin-top: 0;">失敗しない飼育ガイド <span
+                    class="hero-sub">FAIL-PROOF CARE GUIDE.</span></h1>
+            <p class="fade-in-up delay-2" style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">
+                科学的根拠に基づいた、失敗しない飼育マニュアル</p>
+        </section>
+
+        <!-- Live Manual Section -->
+        <section class="manual-section">
+            <h2 class="section-title">更新型マニュアル <span class="hero-sub" style="color: #333; opacity: 0.6;">LIVE
+                    MANUAL</span></h2>
+            <p class="section-subtitle">最新の知見を反映した、オンライン・リファレンス</p>
+
+            <div class="manual-grid">
+                <!-- 温度・湿度の黄金比 -->
+                <div class="manual-card">
+                    <div class="card-icon">🌡️</div>
+                    <h3>温度・湿度の黄金比</h3>
+                    <div class="golden-ratio">
+                        <div class="ratio-item">
+                            <span class="ratio-label">温度</span>
+                            <span class="ratio-value">25〜28°C</span>
+                        </div>
+                        <div class="ratio-divider">/</div>
+                        <div class="ratio-item">
+                            <span class="ratio-label">湿度</span>
+                            <span class="ratio-value">50%前後</span>
+                        </div>
+                    </div>
+
+                    <div class="manual-content">
+                        <h4>科学的根拠</h4>
+                        <p>この温度帯は、レッドローチの代謝効率と繁殖率が最も高いバランスポイントです。25°C以下では活動が鈍化し、30°C以上では過度なストレスがかかります。</p>
+
+                        <h4>管理方法</h4>
+                        <ul>
+                            <li><strong>デジタル温湿度計</strong>を必ず設置</li>
+                            <li>エアコンで<strong>室温を一定</strong>に保つ</li>
+                            <li>霧吹きで<strong>1日1回</strong>湿度調整</li>
+                            <li>直射日光を避け、<strong>風通しの良い場所</strong>に配置</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 餌の科学 -->
+                <div class="manual-card">
+                    <div class="card-icon">🥬</div>
+                    <h3>餌の科学</h3>
+                    <div class="warning-box">
+                        <strong>⚠️ 水分不足は共食いの主要原因</strong>
+                    </div>
+
+                    <div class="manual-content">
+                        <h4>ヒューマンフードの重要性</h4>
+                        <p>レッドローチは雑食性で、野菜や果物から必要な水分とビタミンを摂取します。専用フードだけでは水分不足になり、共食いのリスクが高まります。</p>
+
+                        <h4>推奨食材</h4>
+                        <div class="food-grid">
+                            <div class="food-item">
+                                <span class="food-emoji">🎃</span>
+                                <span class="food-name">かぼちゃ</span>
+                                <span class="food-benefit">ビタミンA豊富</span>
+                            </div>
+                            <div class="food-item">
+                                <span class="food-emoji">🥬</span>
+                                <span class="food-name">小松菜</span>
+                                <span class="food-benefit">カルシウム源</span>
+                            </div>
+                            <div class="food-item">
+                                <span class="food-emoji">🍎</span>
+                                <span class="food-name">りんご</span>
+                                <span class="food-benefit">水分補給</span>
+                            </div>
+                        </div>
+
+                        <h4>給餌のポイント</h4>
+                        <ul>
+                            <li>週2〜3回、<strong>新鮮な野菜・果物</strong>を与える</li>
+                            <li>食べ残しは<strong>24時間以内に除去</strong>（カビ防止）</li>
+                            <li>専用フード（ラビットフード等）と<strong>併用</strong>が理想</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Red Roach Basics Section -->
+        <section class="manual-section"
+            style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 64px 24px;">
+            <h2 class="section-title">レッドローチ基礎知識 <span class="hero-sub" style="color: #333; opacity: 0.6;">RED ROACH
+                    BASICS</span></h2>
+            <p class="section-subtitle">23の学術論文と飼育経験に基づく、科学的な基礎情報</p>
+
+            <div class="manual-grid">
+                <!-- Taxonomy & Classification -->
+                <div class="manual-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>分類と学名</h3>
+
+                    <div class="manual-content">
+                        <div
+                            style="background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #166534;">
+                            <h4 style="color: #166534; margin-bottom: 12px;">現行学名</h4>
+                            <p style="font-size: 1.1rem; font-style: italic; color: #1A1A1A; margin: 0;">
+                                <strong>Shelfordella lateralis</strong>
+                            </p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">Walker, 1868</p>
+                        </div>
+
+                        <h4>学名の変遷</h4>
+                        <ul style="font-size: 0.9rem; line-height: 1.8;">
+                            <li><strong>原記載</strong>: <em>Periplaneta lateralis</em> (1868)</li>
+                            <li><strong>旧学名</strong>: <em>Blatta lateralis</em></li>
+                            <li><strong>現行</strong>: <em>Shelfordella lateralis</em></li>
+                        </ul>
+
+                        <h4>一般名</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.85rem;">
+                            <div>🇯🇵 レッドローチ</div>
+                            <div>🇺🇸 Red Runner</div>
+                            <div>🇬🇧 Turkestan Roach</div>
+                            <div>🌍 Rusty Red Roach</div>
+                        </div>
+
+                        <div style="background: #f0fdf4; padding: 16px; border-radius: 6px; margin-top: 16px;">
+                            <p style="font-size: 0.85rem; color: #166534; margin: 0;">
+                                <strong>分類学的安定性:</strong> 現在は<em>Shelfordella
+                                    lateralis</em>で統一されており、5つ以上のシノニムが歴史的に使用されてきました。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Life Cycle -->
+                <div class="manual-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>ライフサイクル</h3>
+
+                    <div class="manual-content">
+                        <h4>発育期間（26.7°C）</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                            <div style="background: #f8f8f8; padding: 16px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 700; color: #1A1A1A;">222日</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 4px;">雄の成虫化</div>
+                            </div>
+                            <div style="background: #f8f8f8; padding: 16px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 700; color: #1A1A1A;">224日</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 4px;">雌の成虫化</div>
+                            </div>
+                        </div>
+
+                        <h4>繁殖データ</h4>
+                        <ul style="font-size: 0.9rem; line-height: 1.8;">
+                            <li><strong>脱皮回数</strong>: 5回（雄雌とも）</li>
+                            <li><strong>卵鞘数</strong>: 雌1匹あたり最大25個</li>
+                            <li><strong>卵数</strong>: 卵鞘あたり平均16.8個（12-40個）</li>
+                            <li><strong>孵化率</strong>: <span
+                                    style="color: #166534; font-weight: 600;">82.7%</span>（業界最高水準）</li>
+                            <li><strong>孵化幼虫数</strong>: 卵鞘あたり平均13.9匹</li>
+                            <li><strong>成虫寿命</strong>: 12-18ヶ月</li>
+                        </ul>
+
+                        <div style="background: #fef3c7; padding: 16px; border-radius: 6px; margin-top: 16px;">
+                            <p style="font-size: 0.85rem; color: #92400e; margin: 0;">
+                                <strong>💡 高い繁殖力:</strong> 孵化率82.7%は他の餌昆虫と比較して非常に高く、安定した供給を可能にします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Behavior -->
+                <div class="manual-card">
+                    <div class="card-icon">🌙</div>
+                    <h3>行動学的特性</h3>
+
+                    <div class="manual-content">
+                        <h4>活動パターン</h4>
+                        <div
+                            style="background: #1e293b; color: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <div style="font-size: 1.2rem; margin-bottom: 8px;">🌙 <strong>夜行性</strong></div>
+                            <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">主に夜間に活動し、日中は隠れ家で休息します。</p>
+                        </div>
+
+                        <h4>社会行動</h4>
+                        <ul style="font-size: 0.9rem; line-height: 1.8;">
+                            <li><strong>集合行動</strong>: フェロモンによる集団形成</li>
+                            <li><strong>性的二型</strong>: 雄は飛翔可能、雌は集合性が高い</li>
+                            <li><strong>光誘引</strong>: 雄のみ光に誘引される</li>
+                            <li><strong>産卵行動</strong>: 卵鞘を隠れた場所に産む</li>
+                        </ul>
+
+                        <h4>コミュニケーション</h4>
+                        <div style="background: #f8f8f8; padding: 16px; border-radius: 6px;">
+                            <p style="font-size: 0.85rem; color: #666; margin: 0;">
+                                <strong>フェロモン:</strong> 集合・交尾にフェロモンを使用。雌は性フェロモンを放出し、雄は背部腺から媚薬を分泌します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distribution & Habitat -->
+                <div class="manual-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>原産地と分布</h3>
+
+                    <div class="manual-content">
+                        <h4>原産地</h4>
+                        <div
+                            style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <div style="font-size: 1.1rem; font-weight: 600; color: #92400e; margin-bottom: 12px;">
+                                中央アジア～北アフリカ</div>
+                            <div style="font-size: 0.85rem; color: #b45309; line-height: 1.6;">
+                                アフガニスタン、アゼルバイジャン、エジプト、イラン、イラク、イスラエル、ヨルダン、リビア、パキスタン、サウジアラビア、スーダン、UAE
+                            </div>
+                        </div>
+
+                        <h4>生息環境</h4>
+                        <ul style="font-size: 0.9rem; line-height: 1.8;">
+                            <li><strong>気候</strong>: 半乾燥・温暖気候を好む</li>
+                            <li><strong>生活様式</strong>: 主に野外生息</li>
+                            <li><strong>生息場所</strong>: 石の下、砂漠農場、ワジ（涸れ谷）</li>
+                            <li><strong>室内侵入</strong>: 稀（雄のみ光に誘引され侵入）</li>
+                        </ul>
+
+                        <h4>環境適応性</h4>
+                        <div style="background: #f0fdf4; padding: 16px; border-radius: 6px; margin-top: 16px;">
+                            <p style="font-size: 0.85rem; color: #166534; line-height: 1.6; margin: 0;">
+                                <strong>砂漠種特性:</strong> 乾燥・温暖環境に適応しており、湿度50-60%、温度85-95°F（29-35°C）で最適な繁殖を示します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scientific References -->
+            <div
+                style="max-width: 900px; margin: 48px auto 0; padding: 32px; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <h4 style="font-size: 1.1rem; margin-bottom: 20px; color: #1A1A1A; font-weight: 600;">📚 参考文献</h4>
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.9; margin-bottom: 16px;">
+                    本セクションのデータは、<strong>23の高品質ソース</strong>（学術論文14件、飼育経験9件）に基づいています。
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 0.8rem; color: #666;">
+                    <div>
+                        <strong style="color: #1A1A1A;">主要学術ソース:</strong>
+                        <ul style="margin: 8px 0 0 0; padding-left: 20px; line-height: 1.8;">
+                            <li>NIH/PubMed: ライフサイクル研究</li>
+                            <li>Oxford UP: 発育速度分析</li>
+                            <li>ResearchGate: 行動学研究</li>
+                            <li>Cockroach Species File: 分類学</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong style="color: #1A1A1A;">実践ソース:</strong>
+                        <ul style="margin: 8px 0 0 0; padding-left: 20px; line-height: 1.8;">
+                            <li>TopFlight Dubia: 行動観察</li>
+                            <li>Reptile Forums: 繁殖データ</li>
+                            <li>商業ブリーダー記録</li>
+                            <li>長期飼育実績</li>
+                        </ul>
+                    </div>
+                </div>
+                <p
+                    style="font-size: 0.75rem; color: #999; margin-top: 16px; padding-top: 16px; border-top: 1px solid #dee2e6;">
+                    信頼性スコア: ★★★★★ (95%以上が高信頼性ソース) | データ収集: 2026年1月
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Q&A Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Q&A <span class="hero-sub" style="color: #333; opacity: 0.6;">FAQ</span></h2>
+            <p class="section-subtitle">専門家による回答とアドバイス</p>
+
+            <!-- Search Box -->
+            <div class="qa-search-box">
+                <input type="text" id="guideQaSearchInput" placeholder="キーワードで検索（例: 臭い、脱走、繁殖）">
+                <div id="guideSearchResultCount" class="search-result-count" style="display: none;"></div>
+            </div>
+
+            <!-- Q&A Categories Container (dynamically generated by JavaScript) -->
+            <div id="guideQaCategoriesContainer">
+                <!-- Categories will be rendered here by guide-qa-renderer.js -->
+            </div>
+
+            <!-- No Results Message (hidden by default) -->
+            <div id="guideNoResultsMessage" class="no-results" style="display: none;">
+                <p>該当する質問が見つかりませんでした。</p>
+                <p style="font-size: 0.9rem; margin-top: 8px;">別のキーワードで検索してみてください。</p>
+            </div>
+        </section>
+
+        <!-- Related Links -->
+        <section class="manual-section">
+            <div style="background: #f8f8f8; padding: 32px; border-radius: 8px; text-align: center;">
+                <h3 style="margin-bottom: 16px; font-size: 1.2rem;">🍴 活餌の与え方を詳しく知りたい方へ</h3>
+                <p style="margin-bottom: 24px; color: #666;">ピンセット（餌槍）の使い方から種別給餌方法まで、科学的根拠に基づく完全ガイド</p>
+                <a href="./feeding-guide.html"
+                    style="display: inline-block; padding: 16px 32px; background: #1A1A1A; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s;">
+                    活餌給餌ガイドを見る →
+                </a>
+            </div>
+        </section>
+
+        <!-- Update Log -->
+        <section class="update-section">
+            <div class="update-log">
+                <span class="update-icon">📅</span>
+                <span class="update-text">最終更新日: <strong>2026.01.21</strong></span>
+            </div>
+            <p class="update-note">このガイドは、最新の飼育知見に基づいて定期的に更新されます。</p>
+        </section>
+    </main>
+
+    <script type="module" src="/src/scripts/guide.js"></script>
+    <script type="module">
+        import { initGuideQASection } from '/src/scripts/guide-qa-renderer.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initGuideQASection();
+        });
+    </script>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>

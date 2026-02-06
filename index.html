@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RED ROACH | The Vital Source - Global Luxury Brand</title>
+  <meta name="description" content="至高の栄養源を提供する、世界初のラグジュアリー・レッドローチブランド。徹底管理されたラボで生産される、パートナーのための究極のマテリアル。">
+  <link rel="stylesheet" href="./src/styles/global.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Side Menu Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="side-drawer" id="sideDrawer">
+    <nav class="drawer-nav">
+      <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+      <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+      <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+      <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+      <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+      <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+      <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+    </nav>
+  </aside>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="site-nav-links">
+      <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+      <a href="./products.html" class="serif nav-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+      <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+      <a href="./consultation.html" class="serif nav-link">相談室 <span class="nav-sub">CONSULT</span></a>
+      <a href="./guide.html" class="serif nav-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+      <a href="./feeding-guide.html" class="serif nav-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+      <a href="./feeder-database.html" class="serif nav-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+    </div>
+    <div class="telemetry-pill">
+      <div class="live-dot-container">
+        <span class="pulse-dot"></span>
+        LIVE
+      </div>
+      <div class="telemetry-values">
+        <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+        <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section"
+      style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 80px;">
+      <h1 class="serif hero-title fade-in-up delay-1">至高の生命源 <span class="hero-sub">VITAL
+          SOURCE.</span></h1>
+      <p class="fade-in-up delay-2" style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">至高の栄養源を、あなたのパートナーへ。
+      </p>
+
+      <div style="margin-top: 40px;" class="fade-in-up delay-3">
+        <a href="./products.html" class="serif" style="border-bottom: 1px solid #1A1A1A; padding-bottom: 4px;">商品を見る
+          <span style="font-size: 0.7rem; opacity: 0.6; margin-left: 8px;">Explore Collection</span></a>
+      </div>
+
+      <!-- Refined LIVE STATUS -->
+      <section class="monitor-section fade-in-up delay-3" style="margin-top: 2rem;">
+        <h2 class="serif" style="font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 24px; color: #888;">稼育環境ステータス
+          <span style="font-size: 0.6rem; margin-left: 8px; vertical-align: middle;">LIVE STATUS</span>
+        </h2>
+
+        <div class="monitor-grid">
+          <div class="monitor-card">
+            <span class="monitor-label">温度 TEMP</span>
+            <div class="monitor-value" id="temp-a">--<span class="unit">°C</span></div>
+            <div class="status-dot green">● 適正</div>
+          </div>
+
+          <div class="monitor-card">
+            <span class="monitor-label">湿度 HUMIDITY</span>
+            <div class="monitor-value" id="hum-a">--<span class="unit">%</span></div>
+            <div class="status-dot green">● 適正</div>
+          </div>
+        </div>
+        <p id="monitor-status" style="margin-top: 16px; font-size: 0.65rem; color: #999; font-family: monospace;">
+          CONNECTING...</p>
+      </section>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="narrative-section">
+      <div class="container text-center">
+        <p class="serif" style="font-size: 1.5rem; line-height: 2.4; color: #333; margin-bottom: 20px;">
+          徹底管理されたラボ。<br>
+          ヒューマンフードによる飼育。<br>
+          それは「餌」という概念を超える。<br>
+          <br>
+          <span class="brand-color">RED ROACH</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Red Roach Feature Section -->
+    <section class="feature-section fade-in-up delay-1">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 60px;">
+          <h2 class="serif section-title" style="font-size: 2rem; margin-bottom: 16px;">なぜ、私たちが選ばれるのか。 <span
+              class="hero-sub">WHY RED ROACH?</span></h2>
+          <p class="section-subtitle" style="color: #666; font-size: 0.9rem; letter-spacing: 0.1em;">妥協なき品質が紡ぐ、3つのベネフィット
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <!-- Vet Card -->
+          <div class="feature-card">
+            <div class="feature-icon vet-icon">医学</div>
+            <h3 class="serif feature-title">徹底した「食」の安全</h3>
+            <p class="feature-role">獣医学的視点 <span style="font-size: 0.7rem; font-weight: normal; margin-left: 4px;">The
+                Veterinarian's View</span></p>
+            <p class="feature-desc">
+              極めて薄い外骨格（キチン質）による、驚異的な消化吸収率。<br>
+              幼体や老齢個体であっても、消化不全（インパクション）のリスクを極限まで低減します。<br>
+              消化器への負担を最小限に抑える、獣医学的に裏打ちされた「最も安全な選択」です。
+            </p>
+          </div>
+
+          <!-- Researcher Card -->
+          <div class="feature-card">
+            <div class="feature-icon research-icon">科学</div>
+            <h3 class="serif feature-title">理想的な栄養バランス</h3>
+            <p class="feature-role">科学的視点 <span style="font-size: 0.7rem; font-weight: normal; margin-left: 4px;">The
+                Researcher's View</span></p>
+            <p class="feature-desc">
+              タンパク質と脂質の"黄金比"。<br>
+              さらに、特有の素早い動きが爬虫類の捕食本能を強烈に刺激し、拒食個体すらも反応させます。<br>
+              これは単なる餌ではなく、生命力そのものを引き出す「スイッチ」です。
+            </p>
+          </div>
+
+          <!-- Breeder Card -->
+          <div class="feature-card">
+            <div class="feature-icon breeder-icon">経験</div>
+            <h3 class="serif feature-title">安定した供給</h3>
+            <p class="feature-role">ブリーダーの視点 <span style="font-size: 0.7rem; font-weight: normal; margin-left: 4px;">The
+                Master Breeder's View</span></p>
+            <p class="feature-desc">
+              鳴かない、噛まない、臭わない。コオロギ特有の騒音や咬傷事故、悪臭から生体とあなたを解放します。<br>
+              強靭な生命力により長期ストックも極めて容易。<br>
+              あなたの飼育体験を、真にストレスフリーなものへと進化させます。
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 60px; color: #888; font-size: 0.8rem; letter-spacing: 0.2em;">
+          THE LOGICAL CHOICE
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center" style="margin-top: 60px; color: #888; font-size: 0.8rem; letter-spacing: 0.2em;">
+      THE LOGICAL CHOICE
+    </div>
+    </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultation | RED ROACH</title>
+    <meta name="description" content="獣医、研究者、熟練飼育者の知見を結集した、エビデンスベースの飼育相談室。">
+
+    <!-- Google Fonts -->
+    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/styles/variables.css" />
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/animations.css" />
+    <link rel="stylesheet" href="./src/styles/consultation.css" />
+    <link rel="stylesheet" href="./src/styles/monitor.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="./public/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Side Menu Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="side-drawer" id="sideDrawer">
+        <nav class="drawer-nav">
+            <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </nav>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav-links">
+            <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif nav-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif nav-link active">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif nav-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif nav-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif nav-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </div>
+        <div class="telemetry-pill">
+            <div class="live-dot-container">
+                <span class="pulse-dot"></span>
+                LIVE
+            </div>
+            <div class="telemetry-values">
+                <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+                <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="consult-hero fade-in-up delay-1 text-center"
+            style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 60px; padding-bottom: 60px;">
+            <h1 class="serif hero-title text-center">相談室 <span class="hero-sub">CONSULTATION ROOM</span></h1>
+            <p style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">科学的根拠に基づいた最適解をあなたへ。</p>
+        </section>
+
+        <!-- The Three Pillars -->
+        <section class="pillars-section fade-in-up delay-1">
+            <div class="pillars-grid">
+                <!-- VETERINARIAN -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">医学</div>
+                    <h3 class="serif pillar-title">The Veterinarian</h3>
+                    <p class="pillar-sub">医学的見地からの健康管理</p>
+                    <p class="pillar-text">
+                        代謝性骨疾患(MBD)の克服、誤嚥リスク、内臓疾患の予防。<br>
+                        「なんとなく元気がない」を科学的に分析します。
+                    </p>
+                </div>
+                <!-- RESEARCHER -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">科学</div>
+                    <h3 class="serif pillar-title">The Researcher</h3>
+                    <p class="pillar-sub">栄養学と最新のエビデンス</p>
+                    <p class="pillar-text">
+                        Ca:P比率の最適解、ガットローディングの生化学。<br>
+                        最新の論文データに基づいた栄養アドバイスを提供。
+                    </p>
+                </div>
+                <!-- MASTER BREEDER -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">経験</div>
+                    <h3 class="serif pillar-title">The Master Breeder</h3>
+                    <p class="pillar-sub">現場で培われた実践知</p>
+                    <p class="pillar-text">
+                        拒食へのアプローチ、湿度環境の微調整。<br>
+                        教科書には載っていない、現場のノウハウを共有。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider fade-in-up delay-2"></div>
+
+        <section id="healthCheckSection" class="health-section fade-in-up delay-1">
+            <div class="content-container" style="max-width: 800px;">
+                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                    <h2 class="serif hero-title" style="margin-top: 0;">生体の健康診断 <span class="hero-sub">HEALTH
+                            CHECK.</span></h2>
+                    <p style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em; margin-bottom: 0;">
+                        5つの観点から生体の状態を評価し、リスクレベルを判定します。
+                    </p>
+                </div>
+
+                <div id="healthCheckContainer" class="health-tool-container">
+                    <!-- Enhanced Progress Bar with Question Number -->
+                    <div class="health-progress-wrapper">
+                        <div class="progress-label">
+                            <span id="currentQuestionNum">1</span> / <span id="totalQuestions">5</span>
+                        </div>
+                        <div class="health-progress">
+                            <div id="healthProgressBar" class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows (Above Question) -->
+                    <div class="health-nav-arrows">
+                        <button id="healthPrevBtn" class="arrow-btn prev-arrow" style="visibility:hidden;"
+                            aria-label="前の質問">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+                        <button id="healthNextBtn" class="arrow-btn next-arrow" disabled aria-label="次の質問">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Question Container -->
+                    <div id="questionContainer" class="question-box">
+                        <!-- Dynamic Question Injection -->
+                    </div>
+                </div>
+
+                <!-- Result Container (Hidden initially) -->
+                <div id="healthResult" class="health-result" style="display: none;">
+                    <div class="result-header text-center">
+                        <div id="resultIcon" class="result-icon"></div>
+                        <h3 id="resultTitle" class="result-title"></h3>
+                        <p id="resultDesc" class="result-desc"></p>
+                    </div>
+
+                    <div class="result-divider"></div>
+
+                    <div id="resultAdvice" class="result-advice"></div>
+
+                    <!-- Generated Report for Vet -->
+                    <div id="reportContainer" class="report-box" style="display:none;">
+                        <h4>搭 SYMPTOM REPORT (For Vet / Inquiry)</h4>
+                        <textarea id="symptomReportText" readonly class="report-text"></textarea>
+                        <button id="copyReportBtn" class="copy-btn">Copy Report</button>
+                    </div>
+
+                    <div class="result-divider"></div>
+
+                    <div class="result-actions">
+                        <button id="restartCheckBtn" class="result-btn primary">再診断</button>
+                        <button id="proceedToFormBtn" class="result-btn">個別診断</button>
+                    </div>
+
+                    <div class="result-divider"></div>
+
+                    <p class="disclaimer-text text-center" id="healthDisclaimer"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Guidance (Accordion) -->
+        <section class="guidance-section fade-in-up delay-3" style="min-height: 50vh; margin-bottom: 120px;">
+            <h1 class="serif hero-title fade-in-up delay-1" style="margin-top: 0;">Q&A</h1>
+            <p class="fade-in-up delay-2"
+                style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em; text-align: center; margin-bottom: 40px;">
+                よくある質問と専門家の回答
+            </p>
+
+            <!-- Search Box -->
+            <div class="qa-search-container fade-in-up delay-2">
+                <input type="text" id="qaSearchInput" class="qa-search-input" placeholder="🔍 キーワードで検索（例: カルシウム、脱皮、温度）">
+                <div id="searchResultCount" class="search-result-count" style="display: none;"></div>
+            </div>
+
+
+            <!-- Q&A Categories Container -->
+            <div id="qaCategoriesContainer">
+                <!-- Categories will be rendered here by qa-renderer.js -->
+
+                <!-- No Results Message (hidden by default) -->
+                <div id="noResultsMessage" class="no-results" style="display: none;">
+                    <p>該当する質問が見つかりませんでした。</p>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">別のキーワードで検索してみてください。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Form -->
+        <section class="form-section fade-in-up delay-3">
+            <div class="form-container" id="consultationFormContainer">
+                <!-- フォームはconsultation-form.htmlから動的に読み込まれます -->
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Academic Paper Repository -->
+        <section class="repo-section fade-in-up delay-4"
+            style="max-width: 900px; margin: 0 auto 120px; padding: 0 20px;">
+            <div class="repo-header">
+                <h3 class="serif section-title text-center" style="font-size: 1rem; margin-bottom: 24px;">学術論文リポジトリ</h3>
+                <p class="repo-subtitle">エキゾチックアニマルの栄養学と飼育に関する最新研究</p>
+            </div>
+
+            <div id="academicRepositoryContainer"></div>
+        </section>
+
+        <footer class="text-center" style="margin: 80px 0;">
+            <a href="./index.html" class="footer-link serif">Back to Top</a>
+        </footer>
+
+    </main>
+
+    <script type="module" src="./src/scripts/main.js"></script>
+    <script type="module">
+        // 個別相談フォームを動的に読み込み
+        async function loadConsultationForm() {
+            try {
+                const response = await fetch('/src/components/consultation-form.html');
+                if (!response.ok) throw new Error('Failed to load consultation form');
+                const html = await response.text();
+                document.getElementById('consultationFormContainer').innerHTML = html;
+
+                // フォームロジックを初期化
+                const { initConsultationForm } = await import('/src/scripts/consultation-form.js');
+                initConsultationForm();
+            } catch (error) {
+                console.error('Error loading consultation form:', error);
+            }
+        }
+
+        // DOMContentLoaded後にフォームを読み込み
+        document.addEventListener('DOMContentLoaded', loadConsultationForm);
+    </script>
+    <!-- Health Check Module -->
+    <script src="/src/scripts/health-check.js"></script>
+    <script type="module" src="/src/scripts/consultation-logic.js"></script>
+    <script type="module">
+        // Initialize Q&A Section and Academic Repository with dynamic rendering
+        import { initQASection } from '/src/scripts/qa-renderer.js';
+        import { initAcademicRepository } from '/src/scripts/academic-repository.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initQASection();
+            initAcademicRepository();
+        });
+    </script>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>

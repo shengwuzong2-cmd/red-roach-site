@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimization -->
+    <title>活餌給餌ガイド - 餌槍テクニック完全マニュアル | RED ROACH</title>
+    <meta name="description" content="爬虫類・両生類の活餌給餌テクニック完全ガイド。ピンセット（餌槍）の選び方から種別給餌方法、安全対策まで、180+の研究ソースに基づく科学的アプローチ。">
+    <meta name="keywords" content="活餌,給餌,ピンセット,餌槍,爬虫類,レオパ,フトアゴ,モニター,給餌テクニック,飼育方法">
+
+    <!-- Open Graph / SNS -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="活餌給餌ガイド - 餌槍テクニック完全マニュアル">
+    <meta property="og:description" content="科学的根拠に基づく活餌給餌の完全ガイド。初心者から上級者まで対応。">
+    <meta property="og:url" content="https://yoursite.com/feeding-guide.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/feeding-guide.html">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "活餌給餌テクニック - 餌槍の使い方",
+      "description": "爬虫類・両生類への活餌給餌方法の完全ガイド",
+      "image": "https://yoursite.com/images/feeding-guide-hero.jpg",
+      "totalTime": "PT10M",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "ピンセット（餌槍）"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "活餌（コオロギ、ローチ等）"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "ステンレス製ピンセット 15-30cm"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "適切なピンセットを選ぶ",
+          "text": "生体のサイズと種類に合わせて、長さ15-30cmのピンセットを選択"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "餌をつかむ",
+          "text": "昆虫の胸部を軽くつかみ、潰さないように注意"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "提示する",
+          "text": "生体の視界に入れ、小刻みに揺らして注意を引く"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/guide.css">
+
+    <style>
+        /* Feeding Guide Specific Styles */
+        .guide-toc {
+            background: #f8f8f8;
+            border-left: 4px solid #1A1A1A;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .guide-toc h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #1A1A1A;
+        }
+
+        .guide-toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .guide-toc li {
+            margin: 8px 0;
+        }
+
+        .guide-toc a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .guide-toc a:hover {
+            color: #1A1A1A;
+            text-decoration: underline;
+        }
+
+        .tool-comparison {
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        .tool-comparison table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .tool-comparison th,
+        .tool-comparison td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tool-comparison th {
+            background: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .technique-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .technique-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 24px;
+            transition: box-shadow 0.3s;
+        }
+
+        .technique-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .technique-card h4 {
+            margin-bottom: 12px;
+            color: #1A1A1A;
+        }
+
+        .alert-box {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .alert-tip {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .alert-important {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .breadcrumb {
+            padding: 16px 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .related-links {
+            background: #f8f8f8;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 48px 0;
+        }
+
+        .related-links h3 {
+            margin-bottom: 16px;
+        }
+
+        .related-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-links li {
+            margin: 12px 0;
+        }
+
+        .related-links a {
+            color: #1A1A1A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/logo-transparent.png.jpg" alt="RED ROACH" class="site-logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Side Menu Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="side-drawer" id="sideDrawer">
+        <nav class="drawer-nav">
+            <a href="./index.html" class="serif drawer-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif drawer-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif drawer-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif drawer-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif drawer-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif drawer-link">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif drawer-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </nav>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav-links">
+            <a href="./index.html" class="serif nav-link">ホーム <span class="nav-sub">HOME</span></a>
+            <a href="./products.html" class="serif nav-link">商品一覧 <span class="nav-sub">PRODUCTS</span></a>
+            <a href="./quality.html" class="serif nav-link">品質のこだわり <span class="nav-sub">QUALITY</span></a>
+            <a href="./consultation.html" class="serif nav-link">相談室 <span class="nav-sub">CONSULT</span></a>
+            <a href="./guide.html" class="serif nav-link">飼育ガイド <span class="nav-sub">GUIDE</span></a>
+            <a href="./feeding-guide.html" class="serif nav-link active">給餌ガイド <span class="nav-sub">FEEDING</span></a>
+            <a href="./feeder-database.html" class="serif nav-link">餌データベース <span class="nav-sub">DATABASE</span></a>
+        </div>
+        <div class="telemetry-pill">
+            <div class="live-dot-container">
+                <span class="pulse-dot"></span>
+                LIVE
+            </div>
+            <div class="telemetry-values">
+                <span class="telemetry-item"><span id="site-temp">--</span><span class="telemetry-unit">°C</span></span>
+                <span class="telemetry-item"><span id="site-hum">--</span><span class="telemetry-unit">%</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb container">
+            <a href="./index.html">ホーム</a> &gt;
+            <a href="./guide.html">飼育ガイド</a> &gt;
+            <span>活餌給餌ガイド</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh; margin-bottom: 40px; padding-top: 60px;">
+            <h1 class="serif hero-title fade-in-up delay-1" style="margin-top: 0;">活餌給餌完全ガイド <span
+                    class="hero-sub">FEEDING MASTERY.</span></h1>
+            <p class="fade-in-up delay-2" style="font-size: 0.9rem; color: #666; letter-spacing: 0.1em;">
+                餌槍（ピンセット）テクニックから安全対策まで、科学的根拠に基づく完全マニュアル</p>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="container">
+            <div class="guide-toc">
+                <h3>📑 目次</h3>
+                <ul>
+                    <li><a href="#tools">1. 給餌ツールの選び方</a></li>
+                    <li><a href="#techniques">2. 基本テクニック</a></li>
+                    <li><a href="#species">3. 種別給餌方法</a></li>
+                    <li><a href="#safety">4. 安全対策</a></li>
+                    <li><a href="#troubleshooting">5. トラブルシューティング</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 1: Tools -->
+        <section id="tools" class="manual-section">
+            <h2 class="section-title">給餌ツールの選び方 <span class="hero-sub" style="color: #333; opacity: 0.6;">FEEDING
+                    TOOLS</span></h2>
+            <p class="section-subtitle">生体に合わせた最適なピンセット選択</p>
+
+            <!-- ピンセットの種類 -->
+            <h3 style="margin: 40px 0 20px; font-size: 1.3rem; color: #333;">🔧 ピンセットの種類</h3>
+            <div class="manual-grid">
+                <!-- ストレートタイプ -->
+                <div class="manual-card">
+                    <div class="card-icon">📏</div>
+                    <h4>ストレートタイプ（15-20cm）</h4>
+                    <div class="manual-content">
+                        <ul>
+                            <li><strong>用途:</strong> 小型ヤモリ、樹上性種</li>
+                            <li><strong>メリット:</strong> 精密な給餌が可能</li>
+                            <li><strong>推奨種:</strong> レオパ、クレス、小型ヤモリ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- カーブタイプ -->
+                <div class="manual-card">
+                    <div class="card-icon">🪝</div>
+                    <h4>カーブタイプ（20-30cm）</h4>
+                    <div class="manual-content">
+                        <ul>
+                            <li><strong>用途:</strong> 地上性トカゲ、カエル類</li>
+                            <li><strong>メリット:</strong> 視界を遮らない</li>
+                            <li><strong>推奨種:</strong> フトアゴ、ツノガエル</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ロングタイプ -->
+                <div class="manual-card">
+                    <div class="card-icon">📐</div>
+                    <h4>ロングタイプ（30cm以上）</h4>
+                    <div class="manual-content">
+                        <ul>
+                            <li><strong>用途:</strong> 大型モニター、攻撃的な種</li>
+                            <li><strong>メリット:</strong> 安全距離を確保</li>
+                            <li><strong>推奨種:</strong> サバンナモニター、大型種</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 材質別比較 -->
+            <h3 style="margin: 60px 0 20px; font-size: 1.3rem; color: #333;">📊 材質別比較</h3>
+            <div class="tool-comparison" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>材質</th>
+                            <th>耐久性</th>
+                            <th>清潔性</th>
+                            <th>価格</th>
+                            <th>推奨用途</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ステンレス</td>
+                            <td>★★★★★</td>
+                            <td>★★★★★</td>
+                            <td>中</td>
+                            <td>全般</td>
+                        </tr>
+                        <tr>
+                            <td>竹製</td>
+                            <td>★★☆☆☆</td>
+                            <td>★★★☆☆</td>
+                            <td>低</td>
+                            <td>小型種</td>
+                        </tr>
+                        <tr>
+                            <td>プラスチック</td>
+                            <td>★★★☆☆</td>
+                            <td>★★★★☆</td>
+                            <td>低</td>
+                            <td>初心者</td>
+                        </tr>
+                        <tr>
+                            <td>チタン</td>
+                            <td>★★★★★</td>
+                            <td>★★★★★</td>
+                            <td>高</td>
+                            <td>プロ用</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: Techniques -->
+        <section id="techniques" class="manual-section">
+            <h2 class="section-title">基本テクニック <span class="hero-sub" style="color: #333; opacity: 0.6;">BASIC
+                    TECHNIQUES</span></h2>
+
+            <div class="technique-grid">
+                <div class="technique-card">
+                    <h4>✋ 正しい持ち方</h4>
+                    <p><strong>鉛筆持ち（推奨）</strong></p>
+                    <ul>
+                        <li>親指・人差し指・中指で軽く保持</li>
+                        <li>薬指と小指で安定させる</li>
+                        <li>手首は固定、肘で動かす</li>
+                    </ul>
+                    <p style="margin-top: 12px; color: #666; font-size: 0.9rem;">精密なコントロールが可能で、長時間でも疲れにくい</p>
+                </div>
+
+                <div class="technique-card">
+                    <h4>🦗 餌のつかみ方</h4>
+                    <p><strong>昆虫（コオロギ、ローチ）</strong></p>
+                    <ul>
+                        <li>背中側から胸部をつかむ</li>
+                        <li>力加減: 軽く、潰さない程度</li>
+                        <li>角度: 45度で提示</li>
+                    </ul>
+                </div>
+
+                <div class="technique-card">
+                    <h4>🎯 提示テクニック</h4>
+                    <p><strong>揺らし給餌</strong></p>
+                    <ol>
+                        <li>餌を生体の視界に入れる</li>
+                        <li>小刻みに揺らす（生きている動き）</li>
+                        <li>距離: 鼻先から5-10cm</li>
+                        <li>待機: 3-5秒</li>
+                        <li>食いつきを待つ</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Species-Specific -->
+        <section id="species" class="manual-section">
+            <h2 class="section-title">種別給餌方法 <span class="hero-sub" style="color: #333; opacity: 0.6;">SPECIES
+                    GUIDE</span></h2>
+
+            <div class="manual-grid">
+                <div class="manual-card">
+                    <div class="card-icon">🦎</div>
+                    <h3>大型トカゲ（モニター、フトアゴ）</h3>
+                    <div class="alert-box alert-warning">
+                        <strong>⚠️ 注意:</strong> サバンナモニターは手を餌と認識しやすい。必ず長めのピンセットを使用し、別容器で給餌すること。
+                    </div>
+                    <div class="manual-content">
+                        <h4>推奨ツール</h4>
+                        <ul>
+                            <li>長さ: 25-30cm</li>
+                            <li>タイプ: カーブ型</li>
+                            <li>材質: ステンレス</li>
+                        </ul>
+                        <h4>テクニック</h4>
+                        <ol>
+                            <li>別容器給餌: ケージ外で給餌</li>
+                            <li>距離確保: 30cm以上離れる</li>
+                            <li>素早く離す: 食いついたら即座に放す</li>
+                            <li>手給餌禁止: ケージアグレッション予防</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="manual-card">
+                    <div class="card-icon">🦎</div>
+                    <h3>中型ヤモリ（レオパ、ニシアフ）</h3>
+                    <div class="alert-box alert-tip">
+                        <strong>💡 ヒント:</strong> レオパは視力が良くないため、餌を動かして注意を引くことが重要。
+                    </div>
+                    <div class="manual-content">
+                        <h4>推奨ツール</h4>
+                        <ul>
+                            <li>長さ: 15-20cm</li>
+                            <li>タイプ: ストレート型</li>
+                            <li>材質: ステンレス、竹製</li>
+                        </ul>
+                        <h4>テクニック</h4>
+                        <ol>
+                            <li>揺らし給餌: 小刻みに揺らす</li>
+                            <li>目の前で提示: 5cm程度の距離</li>
+                            <li>待機: 3-5秒待つ</li>
+                            <li>食後確認: 飲み込みを確認</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="manual-card">
+                    <div class="card-icon">🐸</div>
+                    <h3>カエル類（ツノガエル）</h3>
+                    <div class="alert-box alert-important">
+                        <strong>⚠️ 危険:</strong> ツノガエルは強力な顎を持つ。指を噛まれないよう注意。
+                    </div>
+                    <div class="manual-content">
+                        <h4>推奨ツール</h4>
+                        <ul>
+                            <li>長さ: 20-25cm</li>
+                            <li>タイプ: カーブ型</li>
+                            <li>材質: ステンレス</li>
+                        </ul>
+                        <h4>テクニック</h4>
+                        <ol>
+                            <li>直接給餌: 口元に近づける</li>
+                            <li>軽く触れる: 反射を誘発</li>
+                            <li>ゆっくり離す: 飲み込みを確認</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Link to Feeder Database Page -->
+        <section class="manual-section" style="margin-top: 48px;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 48px; border-radius: 12px; text-align: center; color: white;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px; color: white;"> 爬虫類餌データベース</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 24px; opacity: 0.95;">科学的データに基づく栄養価と特徴(180+の研究ソースより)</p>
+                <p style="margin-bottom: 32px; opacity: 0.9;">各餌昆虫の詳細な栄養成分、Ca:P比、脂肪酸組成、参考文献を専用ページでご覧いただけます。</p>
+                <a href="./feeder-database.html" style="display: inline-block; background: white; color: #667eea; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: transform 0.2s;">
+                    餌データベースを見る 
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 4: Safety -->
+        <section id="safety" class="manual-section">
+            <h2 class="section-title">安全対策 <span class="hero-sub" style="color: #333; opacity: 0.6;">SAFETY
+                    MEASURES</span></h2>
+
+            <div class="manual-grid">
+                <div class="manual-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>咬傷予防</h3>
+                    <div class="manual-content">
+                        <h4>基本ルール</h4>
+                        <ul>
+                            <li>✅ 長めのピンセットを使用</li>
+                            <li>✅ 別容器で給餌（大型種）</li>
+                            <li>✅ 食後は距離を取る</li>
+                            <li>❌ 手から直接給餌しない</li>
+                            <li>❌ 生体の頭上に手を出さない</li>
+                        </ul>
+
+                        <h4>危険度別対策</h4>
+                        <p><strong>高危険度（モニター、大型ヘビ）</strong></p>
+                        <ul>
+                            <li>30cm以上のピンセット必須</li>
+                            <li>別容器給餌</li>
+                            <li>給餌後は即座にケージを閉める</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>誤飲予防</h3>
+                    <div class="manual-content">
+                        <h4>床材の誤飲対策</h4>
+                        <ul>
+                            <li>別容器で給餌</li>
+                            <li>給餌皿を使用</li>
+                            <li>床材を新聞紙に変更（給餌時のみ）</li>
+                        </ul>
+
+                        <h4>ピンセットの誤飲対策</h4>
+                        <ul>
+                            <li>食いついたら即座に放す</li>
+                            <li>引っ張らない</li>
+                            <li>飲み込みを確認してから離す</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Troubleshooting -->
+        <section id="troubleshooting" class="faq-section">
+            <h2 class="section-title">トラブルシューティング <span class="hero-sub" style="color: #333; opacity: 0.6;">FAQ</span>
+            </h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>餌を食べない</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <h4>原因と対策</h4>
+                        <p><strong>温度が低い</strong></p>
+                        <ul>
+                            <li>対策: バスキングスポット温度を確認</li>
+                            <li>目標: 種別の至適温度に調整</li>
+                        </ul>
+                        <p><strong>脱皮前</strong></p>
+                        <ul>
+                            <li>対策: 脱皮完了まで待つ</li>
+                            <li>期間: 脱皮後2-3日から再開</li>
+                        </ul>
+                        <p><strong>ストレス</strong></p>
+                        <ul>
+                            <li>対策: 環境を見直す</li>
+                            <li>チェック: 隠れ家、温度、湿度</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ピンセットを怖がる</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <h4>対策</h4>
+                        <ol>
+                            <li><strong>色を変える:</strong> 黒→木製、透明</li>
+                            <li><strong>距離を取る:</strong> 徐々に近づける</li>
+                            <li><strong>ドロップ給餌:</strong> 落として与える</li>
+                            <li><strong>慣らし期間:</strong> 1-2週間かけて慣らす</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>攻撃的になった</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <h4>原因</h4>
+                        <ul>
+                            <li>ケージアグレッション</li>
+                            <li>手を餌と認識</li>
+                        </ul>
+                        <h4>対策</h4>
+                        <ol>
+                            <li>別容器給餌に切り替え</li>
+                            <li>長いピンセット使用</li>
+                            <li>給餌時間を変更</li>
+                            <li>ハンドリング中止（1-2週間）</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Links (Internal Linking for SEO) -->
+        <section class="container">
+            <div class="related-links">
+                <h3>関連ガイド</h3>
+                <ul>
+                    <li>📊 <a href="./products.html">給餌量計算 - Feeding Optimizer</a></li>
+                    <li>📖 <a href="./guide.html">飼育ガイド - 温度・湿度管理</a></li>
+                    <li>💬 <a href="./consultation.html">相談室 - 専門家に質問</a></li>
+                    <li>🔬 <a href="./quality.html">品質のこだわり - 栄養価データ</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Update Log -->
+        <section class="update-section">
+            <div class="update-log">
+                <span class="update-icon">📅</span>
+                <span class="update-text">最終更新日: <strong>2026.01.21</strong></span>
+            </div>
+            <p class="update-note">このガイドは、180+の学術論文と飼育経験者の知見に基づいて作成されています。</p>
+        </section>
+    </main>
+
+    <script type="module" src="/src/scripts/guide.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>
